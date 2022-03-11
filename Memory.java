@@ -2,6 +2,10 @@ public class Memory {
     private String manufacture;
     private int capacity;
 
+    public Memory(int capacity) {
+        this.capacity = capacity;
+    }
+
     public Memory(){
 
     }
@@ -27,4 +31,10 @@ public class Memory {
     }
 
 
+    public static void memoryInfo(Memory memory){
+        System.out.println("");
+        System.out.println("Memory:");
+        System.out.println("Manufacture - "+ memory.getManufacture() );
+        System.out.println("Capacity - "+ memory.getCapacity()+" Gb");
+    }
 }

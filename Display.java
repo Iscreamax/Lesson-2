@@ -36,4 +36,11 @@ public class Display {
     public void setInch(double inch) {
         this.inch = inch;
     }
+    public static void displayInfo(Display display){
+        System.out.println("");
+        System.out.println("Display:");
+        System.out.println("Manufacture - "+ display.getManufacture() );
+        System.out.println("Types - "+ display.getTypes());
+        System.out.println("Inch - "+ display.getInch());
+    }
 }

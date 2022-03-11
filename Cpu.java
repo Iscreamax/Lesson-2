@@ -26,4 +26,11 @@ public class Cpu {
     public void setFrequency(double frequency) {
         this.frequency = frequency;
     }
+    public static void cpuInfo(Cpu cpu){
+        System.out.println("");
+        System.out.println("Cpu:");
+        System.out.println("Manufacture - "+ cpu.getManufacture() );
+        System.out.println("Frequency - "+ cpu.getFrequency());
+        System.out.println("");
+    }
 }
