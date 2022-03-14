@@ -38,10 +38,51 @@ public class Iphone {
     public int getPrice(){
         return price;
     }
-    public static void iphoneInfo(Iphone iphone){
-      System.out.println("Iphone "+ iphone.model + "/" + iphone.version+"/"+iphone.memory.getCapacity()  + "Gb/"
-              + iphone.battery.getCapacity()+ "mah/"+ iphone.display.getInch()+"inh/"+iphone.cpu.getFrequency()+"Ggz/price -"+iphone.price + "$");
 
+    public Battery getBattery() {
+        return battery;
     }
 
+    public void setBattery(Battery battery) {
+        this.battery = battery;
+    }
+
+    public Memory getMemory() {
+        return memory;
+    }
+
+    public void setMemory(Memory memory) {
+        this.memory = memory;
+    }
+
+    public Display getDisplay() {
+        return display;
+    }
+
+    public void setDisplay(Display display) {
+        this.display = display;
+    }
+
+    public Cpu getCpu() {
+        return cpu;
+    }
+
+    public void setCpu(Cpu cpu) {
+        this.cpu = cpu;
+    }
+    public  String iphoneInfo(){
+        return("Iphone "+ model + "/" + version+"/"+memory.getCapacity()  + "Gb/"
+                + battery.getCapacity()+ "mah/"+display.getInch()+"inh/"+cpu.getFrequency()+
+                "Ggz/price -"+price + "$");
+    }
+
+    public String makeCall (Client firstClient, Client secondClient){
+        return (firstClient.getFirstName()+firstClient.getSurname() +
+                "got through to " + secondClient.getFirstName()+secondClient.getSurname());
+    }
+    public String sendMessage(Message message,Client firstClient,Client secondClient){
+        return ("Dear "+ secondClient.getFirstName()+secondClient.getSurname()+secondClient.getPatronymic()+", "+
+                "It's "+ firstClient.getFirstName()+firstClient.getSurname()+firstClient.getPatronymic()+", "+message.getLetter_field());
+
+    }
 }

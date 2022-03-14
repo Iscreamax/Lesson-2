@@ -25,10 +25,8 @@ public class Battery {
     public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
-    public static void batteryInfo(Battery battery){
-        System.out.println("");
-        System.out.println("Battery:");
-        System.out.println("Manufacture - "+ battery.getManufacture() );
-        System.out.println("Capacity - "+ battery.getCapacity());
+    public String batteryInfo(){
+        return ("\n"+"Battery:"+"\n"+"Manufacture - "+ getManufacture()+"\n"+ "Capacity - "+ getCapacity() );
+
     }
 }

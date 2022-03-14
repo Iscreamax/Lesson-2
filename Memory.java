@@ -31,10 +31,8 @@ public class Memory {
     }
 
 
-    public static void memoryInfo(Memory memory){
-        System.out.println("");
-        System.out.println("Memory:");
-        System.out.println("Manufacture - "+ memory.getManufacture() );
-        System.out.println("Capacity - "+ memory.getCapacity()+" Gb");
+    public String memoryInfo(){
+       return("\n"+ "Memory: "+"\n"+"Manufacture - "+ getManufacture()+"\n"+ "Capacity - "+ getCapacity()+" Gb");
+
     }
 }
