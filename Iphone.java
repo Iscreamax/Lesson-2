@@ -82,7 +82,7 @@ public class Iphone {
     }
     public String sendMessage(Message message,Client firstClient,Client secondClient){
         return ("Dear "+ secondClient.getFirstName()+secondClient.getSurname()+secondClient.getPatronymic()+", "+
-                "It's "+ firstClient.getFirstName()+firstClient.getSurname()+firstClient.getPatronymic()+", "+message.getLetter_field());
+                "It's "+ firstClient.getFirstName()+firstClient.getSurname()+firstClient.getPatronymic()+", "+message.getLetterField());
 
     }
 }
